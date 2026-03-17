@@ -225,6 +225,194 @@
             fill: white;
         }
 
+        /* Install Guide */
+        .install-guide {
+            padding: 80px 0 40px;
+        }
+
+        .install-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .install-step {
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+
+        .step-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-line {
+            width: 2px;
+            flex: 1;
+            background: linear-gradient(to bottom, #3b82f6, rgba(59, 130, 246, 0.1));
+            margin: 6px 0;
+        }
+
+        .step-content {
+            padding-bottom: 36px;
+        }
+
+        .step-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 6px;
+            line-height: 32px;
+        }
+
+        .step-content p {
+            font-size: 13px;
+            color: #6e6e73;
+            line-height: 1.6;
+        }
+
+        .step-content .step-tip {
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: rgba(59, 130, 246, 0.06);
+            border-radius: 10px;
+            font-size: 12px;
+            color: #4a7cc9;
+            line-height: 1.5;
+        }
+
+        .step-mockup {
+            margin-top: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .step-mockup-titlebar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 10px;
+            background: rgba(0, 0, 0, 0.03);
+            font-size: 10px;
+            color: #999;
+        }
+
+        .step-mockup-titlebar .tl { width: 8px; height: 8px; border-radius: 50%; }
+        .step-mockup-titlebar .tl-r { background: #ff5f57; }
+        .step-mockup-titlebar .tl-y { background: #febc2e; }
+        .step-mockup-titlebar .tl-g { background: #28c840; }
+        .step-mockup-titlebar span { margin-left: 6px; }
+
+        .step-mockup-body {
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .mock-app-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mock-app-icon .icon-box {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mock-app-icon .icon-box svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .mock-app-icon .label {
+            font-size: 10px;
+            color: #1d1d1f;
+        }
+
+        .mock-arrow {
+            color: #3b82f6;
+            font-size: 24px;
+            animation: arrowBounce 1.5s ease-in-out infinite;
+        }
+
+        @keyframes arrowBounce {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(6px); }
+        }
+
+        .mock-folder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mock-folder .folder-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: linear-gradient(180deg, #6cb4f7 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mock-folder .folder-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .mock-folder .label {
+            font-size: 10px;
+            color: #1d1d1f;
+        }
+
+        .install-step:last-child .step-line {
+            display: none;
+        }
+
+        .install-step:last-child .step-content {
+            padding-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .install-steps {
+                padding: 0 8px;
+            }
+        }
+
         /* Features Section */
         .features {
             padding: 80px 0;
@@ -462,6 +650,102 @@
                     <span class="mockup-input-field">질문을 입력하세요</span>
                     <div class="mockup-send">
                         <svg viewBox="0 0 24 24"><path d="M5 12l7-7 7 7M12 5v14"/></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Install Guide -->
+        <section class="install-guide">
+            <h2 class="section-title">설치 방법</h2>
+            <div class="install-steps">
+                <!-- Step 1 -->
+                <div class="install-step">
+                    <div class="step-indicator">
+                        <div class="step-number">1</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>파일 다운로드</h3>
+                        <p>위의 Download 버튼을 눌러 <strong>Interlude-mini.dmg</strong> 파일을 받으세요.<br>보통 '다운로드' 폴더에 저장됩니다.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="install-step">
+                    <div class="step-indicator">
+                        <div class="step-number">2</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>DMG 파일 열기</h3>
+                        <p>다운로드한 <strong>.dmg</strong> 파일을 더블클릭하면 아래와 같은 창이 열립니다.</p>
+                        <!-- DMG Mockup -->
+                        <div class="step-mockup">
+                            <div class="step-mockup-titlebar">
+                                <div class="tl tl-r"></div>
+                                <div class="tl tl-y"></div>
+                                <div class="tl tl-g"></div>
+                                <span>Interlude Mini Installer</span>
+                            </div>
+                            <div class="step-mockup-body">
+                                <div class="mock-app-icon">
+                                    <div class="icon-box">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.5"><circle cx="11" cy="11" r="6"/><path d="M16 16l4 4"/><path d="M11 8v6M8 11h6" stroke-width="1.2"/></svg>
+                                    </div>
+                                    <span class="label">Interlude-mini</span>
+                                </div>
+                                <div class="mock-arrow">&rarr;</div>
+                                <div class="mock-folder">
+                                    <div class="folder-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M3 7v13a1 1 0 001 1h16a1 1 0 001-1V9a1 1 0 00-1-1h-8l-2-2H4a1 1 0 00-1 1z"/></svg>
+                                    </div>
+                                    <span class="label">Applications</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="install-step">
+                    <div class="step-indicator">
+                        <div class="step-number">3</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>앱 아이콘을 Applications로 드래그</h3>
+                        <p>왼쪽의 <strong>Interlude-mini</strong> 아이콘을 마우스로 끌어서 오른쪽 <strong>Applications</strong> 폴더 위에 놓으세요. 이렇게 하면 설치가 완료됩니다.</p>
+                        <div class="step-tip">
+                            끌어다 놓아도 화면에 아무 변화가 없는 것처럼 보일 수 있지만, 정상적으로 복사된 거예요. 그냥 창을 닫으시면 됩니다.
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="install-step">
+                    <div class="step-indicator">
+                        <div class="step-number">4</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>앱 실행</h3>
+                        <p>Launchpad(런치패드)를 열거나 Finder에서 '응용 프로그램' 폴더로 이동한 후 <strong>Interlude-mini</strong>를 더블클릭하세요.</p>
+                        <div class="step-tip">
+                            처음 실행 시 "확인되지 않은 개발자" 경고가 나올 수 있어요.<br>
+                            그때는 <strong>시스템 설정 &gt; 개인정보 보호 및 보안</strong>에서 '확인 없이 열기'를 눌러주세요.
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="install-step">
+                    <div class="step-indicator">
+                        <div class="step-number">5</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>설치 파일 정리</h3>
+                        <p>설치가 끝나면 데스크탑에 남아있는 <strong>Interlude Mini Installer</strong> 아이콘을 오른쪽 클릭 &gt; <strong>"... 추출"</strong>을 눌러 제거하세요. 다운로드 폴더의 .dmg 파일도 삭제해도 됩니다.</p>
+                        <div class="step-tip">
+                            이 아이콘은 설치용 디스크 이미지가 열려 있는 것이에요. 앱은 이미 Applications에 복사되었으니 안전하게 제거할 수 있습니다.
+                        </div>
                     </div>
                 </div>
             </div>
