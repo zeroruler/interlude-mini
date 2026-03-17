@@ -13,13 +13,13 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
-            background: #0a0a0f;
-            color: #e0e0e0;
+            background: #f5f5f7;
+            color: #1d1d1f;
             min-height: 100vh;
             overflow-x: hidden;
         }
 
-        /* Background gradient */
+        /* Background */
         .bg-gradient {
             position: fixed;
             top: 0;
@@ -27,9 +27,9 @@
             width: 100%;
             height: 100%;
             background:
-                radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 50%);
+                radial-gradient(ellipse at 20% 30%, rgba(59, 130, 246, 0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 60%, rgba(217, 119, 87, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 90%, rgba(139, 92, 246, 0.04) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
@@ -69,11 +69,11 @@
             align-items: center;
             gap: 8px;
             padding: 6px 14px;
-            background: rgba(217, 119, 87, 0.1);
-            border: 1px solid rgba(217, 119, 87, 0.2);
+            background: rgba(217, 119, 87, 0.08);
+            border: 1px solid rgba(217, 119, 87, 0.18);
             border-radius: 20px;
             font-size: 12px;
-            color: #d97757;
+            color: #c26a45;
             margin-bottom: 24px;
             letter-spacing: 0.5px;
         }
@@ -89,14 +89,12 @@
             letter-spacing: -1.5px;
             line-height: 1.1;
             margin-bottom: 16px;
-            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #1d1d1f;
         }
 
         .subtitle {
             font-size: 17px;
-            color: #8892a4;
+            color: #6e6e73;
             line-height: 1.6;
             margin-bottom: 36px;
         }
@@ -115,12 +113,12 @@
             cursor: pointer;
             text-decoration: none;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 24px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25);
         }
 
         .download-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.35);
         }
 
         .download-btn svg {
@@ -131,7 +129,7 @@
         .download-info {
             margin-top: 12px;
             font-size: 12px;
-            color: #555;
+            color: #aaa;
         }
 
         /* App Mockup */
@@ -139,13 +137,13 @@
             width: 340px;
             border-radius: 12px;
             overflow: hidden;
-            background: rgba(30, 30, 40, 0.85);
+            background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(40px);
             -webkit-backdrop-filter: blur(40px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             box-shadow:
-                0 24px 80px rgba(0, 0, 0, 0.5),
-                0 0 0 0.5px rgba(255, 255, 255, 0.05);
+                0 24px 80px rgba(0, 0, 0, 0.12),
+                0 0 0 0.5px rgba(0, 0, 0, 0.06);
         }
 
         .mockup-titlebar {
@@ -153,7 +151,7 @@
             align-items: center;
             gap: 7px;
             padding: 13px 14px;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(0, 0, 0, 0.03);
         }
 
         .traffic-light {
@@ -190,8 +188,8 @@
 
         .mock-bubble.ai {
             align-self: flex-start;
-            background: rgba(255, 255, 255, 0.06);
-            color: #d4d4d8;
+            background: rgba(0, 0, 0, 0.05);
+            color: #3a3a3c;
         }
 
         .mockup-input {
@@ -199,15 +197,15 @@
             align-items: center;
             gap: 10px;
             padding: 14px 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            background: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            background: rgba(0, 0, 0, 0.02);
         }
 
         .mockup-input-field {
             flex: 1;
             background: none;
             border: none;
-            color: #555;
+            color: #aaa;
             font-size: 13px;
         }
 
@@ -238,7 +236,7 @@
             font-weight: 700;
             letter-spacing: -0.5px;
             margin-bottom: 48px;
-            color: #f0f0f5;
+            color: #1d1d1f;
         }
 
         .features-grid {
@@ -249,15 +247,18 @@
 
         .feature-card {
             padding: 28px 24px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.06);
             border-radius: 16px;
             transition: all 0.2s ease;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
 
         .feature-card:hover {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.9);
             border-color: rgba(59, 130, 246, 0.2);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
         }
 
         .feature-icon {
@@ -268,12 +269,12 @@
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 8px;
-            color: #f0f0f5;
+            color: #1d1d1f;
         }
 
         .feature-card p {
             font-size: 13px;
-            color: #8892a4;
+            color: #6e6e73;
             line-height: 1.5;
         }
 
@@ -290,8 +291,8 @@
             width: 80px;
             height: 80px;
             border-radius: 24px;
-            background: linear-gradient(135deg, rgba(217, 119, 87, 0.15), rgba(217, 119, 87, 0.05));
-            border: 1px solid rgba(217, 119, 87, 0.2);
+            background: linear-gradient(135deg, rgba(217, 119, 87, 0.12), rgba(217, 119, 87, 0.04));
+            border: 1px solid rgba(217, 119, 87, 0.15);
             margin-bottom: 20px;
         }
 
@@ -302,7 +303,7 @@
 
         .claude-section p {
             font-size: 15px;
-            color: #8892a4;
+            color: #6e6e73;
             max-width: 440px;
             margin: 0 auto;
             line-height: 1.6;
@@ -310,31 +311,48 @@
 
         .claude-section .highlight {
             color: #d97757;
+            font-weight: 500;
         }
 
         /* Footer */
         footer {
             text-align: center;
             padding: 40px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
         }
 
         footer p {
             font-size: 12px;
-            color: #444;
+            color: #999;
+        }
+
+        footer a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #6e6e73;
         }
 
         footer .claude-mark {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            color: #666;
+            color: #999;
         }
 
         footer .pixel-claude {
             width: 14px;
             height: 11px;
-            opacity: 0.6;
+            opacity: 0.5;
+        }
+
+        .footer-author {
+            margin-top: 6px;
+            font-size: 11px;
+            color: #bbb;
         }
 
         /* Animations */
@@ -513,6 +531,7 @@
                 </span>
                 &nbsp;&middot;&nbsp; 2026
             </p>
+            <p class="footer-author">by <a href="https://github.com/zero-ruler" target="_blank">@zero_ruler</a></p>
         </footer>
     </div>
 </body>
